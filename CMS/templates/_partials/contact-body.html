@@ -1,0 +1,16 @@
+<p class="textLead">
+  <span class="fa fa-envelope"></span> <a href="mailto:{{ contactDetails.emailAddress }}" class="textResetLink">{{ contactDetails.emailAddress }}</a>&nbsp;
+  <nobr><span class="fa fa-phone"></span> <a href="tel:{{ contactDetails.telephoneNumber }}" class="textResetLink">{{ contactDetails.telephoneNumber }}</a></nobr>
+</p>
+
+<div id="gmap_noahsark" class="gmap"></div>
+
+<p class="textLead">
+  <span class="fa fa-map-marker"></span>
+  {{ contactDetails.address1 }},
+  {% if contactDetails.address2 %} {{ contactDetails.address2 }},{% endif %}
+  {{ contactDetails.city }},
+  {% if contactDetails.county %} {{ contactDetails.county }},{% endif %}
+  {{ contactDetails.postcode }}
+  <br>
+</p>

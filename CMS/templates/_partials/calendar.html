@@ -1,0 +1,23 @@
+{% set calendar = entry.events.event.order('eventDate asc') %}
+{% set currentMonth = 0 %}
+{% set months = ['January','February','March','April','May','June','July','August','September','October','November','December'] %}
+
+{% if calendar | length %}
+  {% for event in calendar %}
+  <div class="calendar-list">
+    {% if currentMonth != event.eventDate.month() %}
+      <h3>{{ months[event.eventDate.month()-1] }} {{ event.eventDate.year() }}</h3>
+    {% endif %}
+    <article>
+      <span class="cal-day">
+        {{ event.eventDate.day() }}
+      </span>
+      <h4>{{event.eventTitle}}</h4>
+      {% if event.eventDescription %}
+        <p>{{event.eventDescription}}</p>
+      {% endif %}
+    </article>
+    {% set currentMonth = event.eventDate.month() %}
+  {% endfor %}
+  </div>
+{% endif %}

@@ -1,0 +1,86 @@
+.Hero {
+  position: relative;
+  z-index: 1;
+
+  .Section--content & {
+    margin-bottom: $g-spacer-xl;
+  }
+}
+
+.Hero-img {
+  position: relative;
+  padding-bottom: 46.58%;
+  overflow: hidden;
+
+  img {
+    transition: opacity 1.5s linear;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px 4px 0 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    z-index: 1;
+    &.showing {
+      z-index: 2;
+      opacity: 1;
+    }
+  }
+}
+
+.Hero-quote {
+  border-radius: 0 0 4px 4px;
+  margin-top: 0;
+  padding: $g-spacer-sm $g-spacer-sm $g-spacer-sm $g-spacer;
+  border: 0;
+  p {
+    font-weight: normal;
+    font-size: 0.85rem;
+    line-height: 1.35;
+  }
+}
+
+@include md {
+
+  .Hero {
+    position: relative;
+  }
+
+  .Hero-img img {
+    border-radius: 8px;
+  }
+
+  .Hero-quote {
+    position: absolute;
+    bottom: $g-spacer-lg;
+    left: $g-spacer-lg;
+    right: $g-spacer-lg;
+    z-index: 3;
+    background: rgba($c-light, .8);
+    border-radius: 0 0 8px 8px;
+    padding: $g-spacer;
+    p {
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+  }
+
+}
+
+
+
+@include lg {
+  .Hero-quote {
+    left: $g-spacer-xxl;
+    right: $g-spacer-xxl;
+    bottom: $g-spacer-xxl;
+    p {
+      font-size: 1.25rem;
+    }
+  }
+}

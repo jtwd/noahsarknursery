@@ -1,0 +1,9 @@
+{% set newsletters = entry.newsletter.newsletters.order('newsletterDate desc') %}
+
+{% if newsletters | length %}
+  <ul class="LinkList">
+    {% for item in newsletters %}
+      <li><h4><a href="{{ item.newsletterFile.first().url }}" target="_blank">{{ item.newsletterTitle }}</a></h4></li>
+    {% endfor %}
+  </ul>
+{% endif %}

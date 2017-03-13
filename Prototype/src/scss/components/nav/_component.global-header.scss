@@ -1,0 +1,28 @@
+$global-header-padding: 2rem 0 0;
+
+
+.GlobalHeader {
+  position: relative;
+  padding: $global-header-padding;
+
+  @include lg {
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 20;
+      top: 0;
+      right: 0;
+      width: 20%;
+      height: 0;
+      padding-top: 26%;
+      background: url('../img/header-monkey.png') no-repeat 0 0;
+      background-size: 100%;
+    }
+  }
+  @include xl {
+    &:after {
+      top: -25px;
+    }
+  }
+}

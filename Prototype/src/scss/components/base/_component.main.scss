@@ -1,0 +1,28 @@
+h4 {
+  font-size: 1.25rem;
+}
+
+.LinkList {
+  li {
+    padding-bottom: 0.25rem;
+  }
+  a {
+    text-decoration: none;
+    &:hover, &:focus {
+      text-decoration: underline;
+      color: $c-highlight;
+    }
+  }
+}
+
+.Main {
+  padding: $g-spacer;
+  position: relative;
+  z-index: 10;
+  padding-bottom: $g-spacer-xxl;
+
+  @include md {
+    padding-left: $g-spacer-xl;
+    padding-right: $g-spacer-xl;
+  }
+}

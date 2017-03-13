@@ -1,0 +1,90 @@
+{
+  "_args": [
+    [
+      "gel-typography",
+      "C:\\Users\\jamest\\Dropbox\\Work\\Atomic\\Project"
+    ]
+  ],
+  "_from": "gel-typography@*",
+  "_id": "gel-typography@2.0.2",
+  "_inCache": true,
+  "_location": "/gel-typography",
+  "_nodeVersion": "0.12.7",
+  "_npmUser": {
+    "email": "shaun.bent@bbc.co.uk",
+    "name": "shaunbent"
+  },
+  "_npmVersion": "2.11.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "gel-typography",
+    "raw": "gel-typography",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "*",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/gel-typography/-/gel-typography-2.0.2.tgz",
+  "_shasum": "693f8edc1baf0e747f38aea94a721b3069d463c4",
+  "_shrinkwrap": null,
+  "_spec": "gel-typography",
+  "_where": "C:\\Users\\jamest\\Dropbox\\Work\\Atomic\\Project",
+  "author": {
+    "name": "BBC"
+  },
+  "bugs": {
+    "url": "https://github.com/bbc/gel-typography/issues"
+  },
+  "dependencies": {
+    "gel-sass-tools": "^1.1.0"
+  },
+  "description": "A flexible code implementation of the GEL Typography",
+  "devDependencies": {
+    "node-sass": "^3.2.0",
+    "sass-mq": "^3.2.2"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "693f8edc1baf0e747f38aea94a721b3069d463c4",
+    "tarball": "https://registry.npmjs.org/gel-typography/-/gel-typography-2.0.2.tgz"
+  },
+  "gitHead": "8cd4c8fd89c5c27e730718b9668632129d1a22ef",
+  "homepage": "https://github.com/bbc/gel-typography",
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "dist",
+    "node_modules",
+    "src",
+    "test",
+    "tests"
+  ],
+  "installable": true,
+  "keywords": [
+    "bbc",
+    "gel",
+    "typography"
+  ],
+  "license": "MIT",
+  "main": "_typography.scss",
+  "maintainers": [
+    {
+      "name": "shaunbent",
+      "email": "shaun.bent@bbc.co.uk"
+    }
+  ],
+  "name": "gel-typography",
+  "optionalDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bbc/gel-typography.git"
+  },
+  "scripts": {
+    "dist": "node-sass src/gel-typography.scss dist/gel-typography.min.css --output-style=compressed --sourcemap=none && node-sass src/gel-typography.scss dist/gel-typography.css --output-style=expanded --sourcemap=none",
+    "test": "node-sass test/test.scss test/test.css --output-style=expanded --sourcemap=none && diff -u test/test-expected.css test/test.css"
+  },
+  "version": "2.0.2"
+}

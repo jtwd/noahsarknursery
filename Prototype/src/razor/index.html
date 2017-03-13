@@ -1,0 +1,11 @@
+@layout("layouts/_layout.generic.html");
+
+@{
+  var x = pages.length;
+}
+
+<ul>
+@for(var i=0; i < x; i++) {
+  <li><a href="@data.pages[i].url">@data.pages[i].name</a></li>
+}
+</ul>

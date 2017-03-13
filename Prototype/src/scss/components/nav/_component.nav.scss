@@ -1,0 +1,74 @@
+.Nav {
+  transition: all 0.75s ease-in;
+  position: relative;
+  margin-top: -555px;
+  margin-bottom: 2rem;
+  width: 100%;
+  background: url(../img/bg-menu-grad.png) repeat-x center bottom;
+  border-radius: 0 0 35px 35px;
+  z-index: $g-z-menu-mob;
+  text-align: center;
+  padding-top: 180px;
+  padding-bottom: 45px;
+  font-family: $g-font-sans2;
+
+  @include xxs {
+    margin-bottom: 0;
+  }
+
+  .menu-is-open & {
+    margin-top: -185px;
+    margin-bottom: 0;
+  }
+
+  .NavMenu {
+    transition-delay: 1.25s;
+    transition: all 01.25s ease-in;
+    @include reset-list;
+    opacity: 0;
+    margin: 0 $g-spacer-lg;
+    .menu-is-open & {
+      opacity: 1;
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      font-weight: $g-weight-normal;
+      padding: $g-spacer-xs $g-spacer-sm $g-spacer-sm;
+      background: linear-gradient(
+              to bottom,
+              transparent 80%,
+              $c-trans-dark 100%
+      );
+      border-radius: $g-spacer-xl;
+      &:hover, &:focus {
+        color: $c-highlight;
+      }
+    }
+    .is-active {
+      a {
+        color: $c-highlight;
+        span {
+          //text-decoration: underline;
+          display: inline-block;
+          padding: 0 $g-spacer-xs;
+        }
+        &:before, &:after {
+          content: ' * ';
+          position: relative;
+          top: 0.15rem;
+          color: $c-tertiary;
+        }
+      }
+    }
+
+  }
+
+
+  .is-active & {
+    > a {
+      color: $c-highlight;
+      text-decoration: underline;
+    }
+  }
+}

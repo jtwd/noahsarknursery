@@ -1,0 +1,141 @@
+{#
+
+# The site layout template
+# ------------------------
+#
+# This layout template extends the _layouts/base.html layout, and defines the
+# main site layout: the header, footer, and main content area.
+#
+# It’s never accessed directly. Instead it is extended by all of our main site
+# templates.
+#
+# This template defines one block region, `main`, which should be extended by
+# child templates to define the main contents for the page.
+-#}
+
+{% extends "_layouts/base" %}
+
+{# Set the `bodyClass` variable to the entry's section handle if there is one,
+or the first URI segment (this is used by the parent template) #}
+{% if bodyClass is not defined %}
+{% set bodyClass = entry is defined ? entry.section.handle : craft.request.firstSegment %}
+{% endif %}
+
+{# Set the `title` variable to the nav item that matches the first segment #}
+{% if nav[bodyClass] is defined %}
+  {% set title %}{% if title is defined %}{{ title }} - {% endif %}{{ nav[bodyClass].title }}{% endset %}
+{% endif %}
+
+{% set activeSection = craft.request.firstSegment %}
+{% set whoWeAreLink = craft.entries.section('whoWeAreMenu').first() %}
+
+{% set utilityMenu = craft.entries.section('utilityMenu') %}
+
+{% macro menu_item(item = '', title = 'Home', activeItem = '', active = false) %}
+{% set itemUrl = item == '' ? siteUrl : url(item) %}
+<li{% if active or item == activeItem %} class="is-active"{% endif %}><a href="{{itemUrl}}">{{ title }}</a></li>
+{% endmacro %}
+
+{% set subMenu = craft.entries.section('whoWeAreMenu') %}
+{% set menuActive = false %}
+{% for item in subMenu %}
+  {% if item.slug == activeSection %}
+    {% set menuActive = item.menuItemTitle %}
+  {% endif %}
+{% endfor %}
+
+{% block body %}
+
+<header class="GlobalHeader">
+
+  <a href="{{ siteUrl }}" class="Logo Logo--ani">
+    <img src="{{ baseUrl }}assets/img/logo-8bit.png" class="Logo--lg" alt="{{ siteName }}" width="275" height="257">
+    <div class="Logo--sm">
+      <img src="{{ baseUrl }}assets/img/logo-sml-8bit.png" width="172" height="216" alt="">
+      <span class="Logo-text colorPrimary">Noah&rsquo;s</span>
+      <span class="Logo-text colorSecondary">Ark</span>
+      <span class="Logo-text colorTertiary">Nursery</span>
+      <span class="Logo-text colorHighlight">School</span>
+
+      <div class="Logo-frame">
+        <div class="Logo-scene"><img src="{{ baseUrl }}assets/img/logo-scene-24bit.png" alt=""></div>
+        <div class="Logo-ark"><img src="{{ baseUrl }}assets/img/logo-ark-8bit.png" alt=""></div>
+      </div>
+
+    </div>
+  </a>
+
+  <nav class="Nav" id="nav-menu">
+    <ul class="NavMenu NavPrimary">
+      {{ _self.menu_item('', 'Home', activeSection) }}
+      {% if menuActive %}
+        {{ _self.menu_item(whoWeAreLink.slug, 'Who we are', activeSection, true) }}
+      {% else %}
+        {{ _self.menu_item(whoWeAreLink.slug, 'Who we are', activeSection) }}
+      {% endif %}
+      {{ _self.menu_item('gallery', 'Gallery', activeSection) }}
+      {{ _self.menu_item('contact', 'Contact', activeSection) }}
+    </ul>
+
+    {% if utilityMenu | length %}
+      <ul class="NavMenu NavUtility">
+        {% for item in utilityMenu %}
+          {{ _self.menu_item(item.slug, item.menuItemTitle, activeSection) }}
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+  </nav>
+
+  <div class="HeaderBar">
+
+    <button id="btn-nav-toggle" data-toggle="#nav-menu" class="NavToggle">
+      <span>Menu </span>
+      <i class="fa fa-bars"></i>
+      <i class="fa fa-times"></i>
+    </button>
+
+    <a href="{{ url('contact') }}" class="Location">
+      <span><i class="fa fa-map-marker"></i></span>
+      <span> {{ contactDetails.city}},
+        {% if contactDetails.county %}
+          <br>{{ contactDetails.county }}
+        {% endif %}
+      </span>
+    </a>
+  </div>
+
+</header>
+
+<main id="main" role="main" class="Main">
+  {% block main %}{% endblock %}
+</main>
+
+<footer role="contentinfo" class="Footer">
+  <div class="Footer-inner">
+    <p class="Footer-copyright">
+      <small>
+        {% if contactDetails.telephoneNumber %}
+          <a href="tel:{{ contactDetails.telephoneNumber }}">{{ contactDetails.telephoneNumber }}</a><br>
+        {% endif %}
+        {{ contactDetails.address1 }},
+        {% if contactDetails.address2 %}
+          {{ contactDetails.address2 }},
+        {% endif %}
+        {{ contactDetails.city }},
+        {% if contactDetails.county %}
+          {{ contactDetails.county }},
+        {% endif %}
+        {{ contactDetails.postcode }}<br>
+        <b>&copy; <span id="year-copyright">2016</span> {{ siteName }}</b>
+      </small>
+    </p>
+    <p class="Footer-credit"><small>Site by <a href="#">{ jtwd }</a></small></p>
+  </div>
+</footer>
+
+{% endblock %}
+
+{% block foot %}
+  <script src="{{ baseUrl }}assets/js/app1.js"></script>
+{% endblock %}

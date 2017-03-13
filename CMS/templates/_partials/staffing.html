@@ -1,0 +1,18 @@
+{% set members = entry.staff.staffMembers %}
+{% if members | length %}
+<ul class="staffList">
+
+  {% for member in members %}
+
+    <li{% if member.profilePicture | length %} class="haspic"{% endif %}>
+      <h3>{{ member.staffName }}</h3>
+      <p><small>{{ member.staffTitle }}</small></p>
+      {% if member.profilePicture | length %}
+        <img src="{{ member.profilePicture.first().url }}" alt="{{ member.staffName }}" />
+      {% endif %}
+    </li>
+
+  {% endfor %}
+
+</div>
+{% endif %}

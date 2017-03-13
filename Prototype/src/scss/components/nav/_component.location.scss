@@ -1,0 +1,23 @@
+.Location {
+  display: table;
+  text-decoration: none;
+  color: $header-bar-link-color;
+  position: relative;
+  z-index: $g-z-menu-mob-plus2;
+
+  &:hover, &:focus {
+    color: $c-highlight;
+  }
+
+  span {
+    display: table-cell;
+    font-size: 0.7rem;
+    line-height: 1.25;
+    vertical-align: middle;
+    padding: 0 $g-spacer-xs;
+  }
+  .fa {
+    font-size: 1.2rem;
+    color: $c-highlight;
+  }
+}

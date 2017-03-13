@@ -1,0 +1,22 @@
+// ----------------------------------------------------------------------
+
+// Settings: z-index
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @created  08/06/2016
+////
+
+/// Manage all the z-indexes in one place.
+/// List all here in decending order to easily see which is on top
+
+$g-z-base:      0;
+$g-z-bg:        -1;
+
+$g-z-menu-mob: 100;
+$g-z-menu-mob-plus: 110;
+$g-z-menu-mob-plus1: 115;
+$g-z-menu-mob-plus2: 120;

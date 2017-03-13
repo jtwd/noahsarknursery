@@ -1,0 +1,59 @@
+// ----------------------------------------------------------------------
+
+// Elements: Headings
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @create   15/06/2016
+////
+
+/// Base styles for headings h1 - h6
+$heading-font:        $g-font-sans2;
+$heading-font-weight: $g-weight-bold;
+$heading-color:       $c-primary;
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font;
+  font-weight: $heading-font-weight;
+  color: $heading-color;
+
+  strong {
+    color: $c-secondary;
+  }
+  @include trim-child-margins;
+}
+
+h1 {
+  @include trafalgar;
+}
+
+h2 {
+  @include double-pica;
+}
+
+h3 {
+  @include great-primer;
+}
+
+h4 {
+  @include pica;
+}
+
+h5 {
+  @include brevier-bold;
+}
+
+h6 {
+  @include brevier-bold;
+  text-transform: uppercase;
+  margin: 0 0 $g-spacer-sm;
+}

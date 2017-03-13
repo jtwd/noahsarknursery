@@ -1,0 +1,37 @@
+@{
+  var dt = new Date();
+  var year = dt.getFullYear();
+
+  var data = require('./data/global.json');
+  var pages = data.pages;
+}
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Noah's Ark Nursery by {jtwd}</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <div style="height: 0; width: 0; position: absolute; visibility: hidden">
+    <!-- inject:svg --><!-- endinject -->
+  </div>
+
+  <br>
+  <div class="container demo">
+
+    <h1><a href="index.html">@data.title</a></h1>
+
+    @renderBody()
+
+    <br>
+    <p>&copy; {jtwd} @year</p>
+
+  </div>
+
+
+</body>
+</html>

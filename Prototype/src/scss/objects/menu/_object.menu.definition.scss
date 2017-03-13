@@ -1,0 +1,51 @@
+// ----------------------------------------------------------------------
+
+// Object: Menu Definition
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @created  07/07/2016
+////
+
+
+$menu-margin: $g-spacer auto;
+
+$menu-divider-width: 1px;
+$menu-divider-color: $c-dark-30;
+
+
+.o-Menu {
+  display: flex;
+  margin: $menu-margin;
+
+  @include trim-child-margins;
+
+  // Sub-menu
+  .o-Menu {
+    margin: 0;
+  }
+  &:not(.o-Menu--vertical) > .o-Menu {
+    display: flex;
+
+    // Items
+    .o-Menu-item {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .o-Menu-item {
+    position: relative;
+    vertical-align: middle;
+    line-height: 1;
+    text-decoration: none;
+    flex: 0 0 auto;
+    user-select: none;
+
+  }
+
+
+}

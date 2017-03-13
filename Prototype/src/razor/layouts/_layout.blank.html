@@ -1,0 +1,53 @@
+@{
+var dt = new Date();
+var year = dt.getFullYear();
+
+var data = require('./data/global.json');
+var pages = data.pages;
+}
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Noah's Ark Nursery by {jtwd}</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+<body class="Page">
+
+<div style="height: 0; width: 0; position: absolute; visibility: hidden">
+  <!-- inject:svg --><!-- endinject -->
+</div>
+
+@renderBody()
+
+
+<script>
+  function initMap() {
+    var gmap = document.querySelector('.gmap');
+    console.log(gmap);
+    if (gmap) {
+      console.log('init map');
+      var noahsark = {lat: 51.342641, lng: -1.990508};
+      var map = new google.maps.Map(gmap, {
+        zoom: 16,
+        center: noahsark
+      });
+      var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+      });
+    }
+  }
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfs-JTBiljM2gNLmONJM3ObXF4MY1KMm4&callback=initMap"></script>
+
+<script src="assets/js/photoswipe.min.js"></script>
+<script src="assets/js/photoswipe-ui-default.min.js"></script>
+<script src="assets/js/app1.js"></script>
+
+</body>
+</html>

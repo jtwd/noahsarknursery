@@ -1,0 +1,21 @@
+.textLead {
+  font-family: $g-font-sans2;
+  @include great-primer;
+  color: $c-primary;
+
+  .fa {
+    width: 28px;
+    text-align: center;
+  }
+
+}
+
+.textSubHeading {
+  color: $c-highlight;
+  margin-top: -1rem;
+}
+
+.textResetLink {
+  color: $c-secondary;
+  text-decoration: none;
+}

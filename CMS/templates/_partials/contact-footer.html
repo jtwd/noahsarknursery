@@ -1,0 +1,22 @@
+<!-- API Key: AIzaSyBfs-JTBiljM2gNLmONJM3ObXF4MY1KMm4 -->
+
+<script>
+  function initMap() {
+    var gmap = document.querySelector('#gmap_noahsark');
+    console.log(gmap);
+    if (gmap) {
+      console.log('init map');
+      var noahsark = {lat: 51.342641, lng: -1.990508};
+      var map = new google.maps.Map(gmap, {
+        zoom: 16,
+        center: noahsark
+      });
+      var marker = new google.maps.Marker({
+        position: noahsark,
+        map: map
+      });
+    }
+  }
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfs-JTBiljM2gNLmONJM3ObXF4MY1KMm4&callback=initMap"></script>

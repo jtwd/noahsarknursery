@@ -1,0 +1,18 @@
+.IntroTxt {
+  padding: $g-spacer-sm 0 $g-spacer-xl;
+  text-align: center;
+  margin: 1rem 0;
+  position: relative;
+  z-index: 10;
+
+  @include md {
+    padding: $g-spacer-lg $g-spacer-xl $g-spacer-xxl;
+    p {
+      font-size: 1.2rem;
+      line-height: 1.4;
+      max-width: 48rem;
+      margin: 0 auto $g-spacer-lg;
+    }
+  }
+}
+

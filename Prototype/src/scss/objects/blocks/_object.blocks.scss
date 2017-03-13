@@ -1,0 +1,87 @@
+// ----------------------------------------------------------------------
+
+// Object: Blocks
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @create   07/07/2016
+////
+
+/// @example HTML
+/// ```
+/// <ul class="o-Blocks o-Blocks--3up">
+///   <li>....</li>
+///   <li>....</li>
+///   <li>....</li>
+///   <li>....</li>
+/// </ul>
+/// ```
+
+
+$blocks-spacing:   $g-spacer;
+
+
+.o-Blocks {
+  @include reset-list;
+
+  margin: 0 (-$blocks-spacing/2) $blocks-spacing;
+
+  > li {
+    padding: 0 $blocks-spacing/2 $blocks-spacing;
+    width: 100%;
+  }
+
+  @include xxs {
+    @include make-row;
+
+    > li {
+      width: auto;
+    }
+
+    &--2up, &--3up, &--4up, &--5up, &--6up {
+      > li {
+        width:50%;
+      }
+    }
+  }
+
+  @include xs {
+    &--3up, &--5up, &--6up {
+      > li {
+        width:33.33333%;
+      }
+    }
+  }
+
+  @include sm {
+    &--4up, &--5up, &--6up {
+      > li {
+        width:25%;
+      }
+    }
+  }
+
+  @include md {
+    &--5up {
+      > li {
+        width:20%;
+      }
+    }
+    &--6up {
+      > li {
+        width:16.66666%;
+      }
+    }
+  }
+
+  &--collapse {
+    margin: 0 0 $blocks-spacing;
+    > li {
+      padding: 0;
+    }
+  }
+
+}

@@ -1,0 +1,14 @@
+$header-bar-bg-color: $c-light;
+$header-bar-padding: $g-spacer-xs;
+$header-bar-link-color: $c-primary;
+$header-bar-link-hover-color: rgba(yellow, .85);
+
+.HeaderBar {
+  background: $header-bar-bg-color;
+  position: absolute;
+  top: 0;
+  z-index: $g-z-menu-mob-plus1;
+  left: 0;
+  width: 100%;
+  padding: $header-bar-padding;
+}

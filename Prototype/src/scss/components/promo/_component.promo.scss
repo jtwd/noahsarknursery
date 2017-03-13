@@ -1,0 +1,201 @@
+.Promos {
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+.Promo {
+  padding-bottom: $g-spacer-sm;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.Promo-img {
+  margin: $g-spacer-sm;
+  overflow: hidden;
+  border-radius: $g-border-radius $g-border-radius 0 0;
+
+  img {
+    transition: all 0.33s ease-out;
+  }
+}
+
+.Promo-title {
+  @include pica;
+  color: $c-secondary;
+  margin: 0;
+  padding: 0;
+  > span {
+    display: inline-block;
+    padding-bottom: $g-spacer-xxs;
+  }
+}
+
+.Promo-link {
+  @include clearfix;
+  @include color-swap-on-hover(
+    inherit,
+    rgba(255,255,255,0.3),
+    $g-trans-link-speed,
+    true
+  );
+  border-radius: $g-border-radius;
+  display: block;
+  text-decoration: none;
+  padding-top: $g-spacer-xxs;
+  margin: 0 auto;
+
+  &:hover,
+  &:focus {
+    .Promo-img {
+      img {
+        transform: scale(1.1);
+        transition: all 2.5s ease-in;
+      }
+    }
+  }
+}
+
+.Promo-details {
+  text-align: center;
+  padding: 0 $g-spacer-sm $g-spacer-sm;
+  p {
+    font-size: 0.9em;
+    text-transform: none;
+    margin: $g-spacer-xs 0;
+  }
+}
+
+@include xs {
+  .Promos {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  .Promo-link {
+    display: flex;
+    align-items: center;
+    border: 2px solid $c-strong-trans-light;
+    border-radius: 8px;
+    margin: $g-spacer-sm $g-spacer-sm 0;
+  }
+
+  .Promo-img {
+    img {
+      border-radius: 8px;
+    }
+  }
+
+  .Promo:nth-child(2) {
+    .Promo-link {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .Promo:last-child {
+    .Promo-link {
+      margin-bottom: $g-spacer-sm;
+    }
+  }
+
+  .Promo-img {
+    width: 50%;
+    padding-bottom: 0;
+    border-radius: $g-border-radius 0 0 $g-border-radius;
+
+    img {
+
+    }
+  }
+
+  .Promo-details {
+    width: 50%;
+    text-align: left;
+    padding: $g-spacer-sm $g-spacer-sm $g-spacer-sm $g-spacer;
+  }
+
+  .Promo:last-child {
+    .Promo-details {
+      padding-bottom: 0;
+    }
+  }
+}
+
+@include sm {
+
+  .Promo-img {
+    width: 35%;
+  }
+
+  .Promo-title {
+    @include great-primer;
+  }
+
+  .Promo-details {
+    width: 70%;
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+@include md {
+  .Promos {
+    display: flex;
+    justify-content: space-around;
+    padding: $g-spacer-sm $g-spacer;
+  }
+
+  .Promo {
+    padding-bottom: 0;
+    width: 33.33%;
+  }
+
+  .Promo-link {
+    display: block;
+    padding: $g-spacer-sm $g-spacer-sm 0;
+    margin: $g-spacer-sm 0;
+    border-radius: 4px;
+    border: 0;
+    padding: $g-spacer-xs 0;
+  }
+
+  .Promo-img, .Promo-details {
+    width: auto;
+  }
+
+  .Promo-img {
+    padding-right: 0;
+    img {
+      border-radius: 8px;
+    }
+  }
+
+  .Promo-details {
+    text-align: center;
+    padding: $g-spacer-xs $g-spacer-sm 0;
+  }
+
+}
+
+@include lg {
+  .Promo-link {
+    margin: $g-spacer-sm $g-spacer-xs $g-spacer-xs;
+
+  }
+  .Promo-img {
+    margin-left: $g-spacer;
+    margin-right: $g-spacer;
+    margin-top: $g-spacer;
+    margin-bottom: $g-spacer;
+  }
+  .Promo-details {
+    padding-bottom: $g-spacer;
+  }
+  .Promo:last-child {
+    .Promo-details {
+      padding-bottom: $g-spacer;
+    }
+  }
+}

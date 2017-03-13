@@ -1,0 +1,118 @@
+{
+  "_args": [
+    [
+      "sass-mq",
+      "C:\\Users\\jamest\\Dropbox\\Work\\Atomic\\Project"
+    ]
+  ],
+  "_from": "sass-mq@*",
+  "_id": "sass-mq@3.2.9",
+  "_inCache": true,
+  "_location": "/sass-mq",
+  "_nodeVersion": "4.2.2",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/sass-mq-3.2.9.tgz_1458415068239_0.21914083138108253"
+  },
+  "_npmUser": {
+    "email": "kaelig@deloumeau.fr",
+    "name": "kaelig"
+  },
+  "_npmVersion": "3.7.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "sass-mq",
+    "raw": "sass-mq",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "*",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "/gel-sass-tools"
+  ],
+  "_resolved": "https://registry.npmjs.org/sass-mq/-/sass-mq-3.2.9.tgz",
+  "_shasum": "7b60e48c4200474cd1ee5f59be5c6c4afc773012",
+  "_shrinkwrap": null,
+  "_spec": "sass-mq",
+  "_where": "C:\\Users\\jamest\\Dropbox\\Work\\Atomic\\Project",
+  "bugs": {
+    "url": "https://github.com/sass-mq/sass-mq/issues"
+  },
+  "contributors": [
+    {
+      "name": "Guardian Media Group and Contributors."
+    }
+  ],
+  "dependencies": {},
+  "description": "mq() is a Sass mixin that helps manipulating media queries in an elegant way.",
+  "devDependencies": {
+    "eyeglass": "^0.8.3",
+    "node-sass": "^3.4.2",
+    "sassdoc": "^2.1.20"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "7b60e48c4200474cd1ee5f59be5c6c4afc773012",
+    "tarball": "https://registry.npmjs.org/sass-mq/-/sass-mq-3.2.9.tgz"
+  },
+  "eyeglass": {
+    "exports": false,
+    "needs": "^0.8.2",
+    "sassDir": "./_mq.scss"
+  },
+  "files": [
+    "LICENSE.md",
+    "README.md",
+    "_mq.scss",
+    "sass/index.scss"
+  ],
+  "gitHead": "9bc93cd4d735b7c5480cf055b52300b8af23c95c",
+  "homepage": "http://sass-mq.github.io/sass-mq/",
+  "ignore": [
+    "**/.*",
+    "bower.json",
+    "sache.json",
+    "sassdoc",
+    "sassdoc.sh",
+    "scripts",
+    "test"
+  ],
+  "installable": true,
+  "keywords": [
+    "eyeglass-module",
+    "media",
+    "mediaquery",
+    "queries",
+    "query",
+    "responsive",
+    "rwd",
+    "sass"
+  ],
+  "license": "MIT",
+  "main": "_mq.scss",
+  "maintainers": [
+    {
+      "name": "kaelig",
+      "email": "kaelig@deloumeau.fr"
+    },
+    {
+      "name": "sndrs",
+      "email": "a@snd.rs"
+    }
+  ],
+  "name": "sass-mq",
+  "optionalDependencies": {},
+  "repository": [
+    {
+      "type": "git",
+      "url": "https://github.com/sass-mq/sass-mq.git"
+    }
+  ],
+  "scripts": {
+    "sassdoc": "./scripts/sassdoc.sh",
+    "test": "./scripts/test.sh"
+  },
+  "version": "3.2.9"
+}

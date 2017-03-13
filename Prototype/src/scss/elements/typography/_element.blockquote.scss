@@ -1,0 +1,54 @@
+// ----------------------------------------------------------------------
+
+// Elements: Blockquote
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @create   17/06/2016
+////
+
+/// Unclassed blockquotes and cites
+
+$bq-border-size: 4px;
+$bq-margin: $g-spacer 0 $g-spacer;
+$bq-padding: $g-spacer $g-spacer-lg;
+$bq-border: 0 0 0 $bq-border-size;
+
+$bq-border-color: $c-highlight;
+$bq-quote-color: $c-primary;
+$bq-quote-style: italic;
+$bq-quote-weight: $g-weight-bold;
+
+$bq-cite-style: normal;
+$bq-cite-color: $c-primary;
+
+
+blockquote {
+  margin: $bq-margin;
+  padding: $bq-padding;
+  border-width: $bq-border;
+  border-style: solid;
+  border-color: $bq-border-color;
+
+  @include trim-child-margins;
+
+  p, cite {
+    margin-left: -($bq-border-size); // adjust alignment for border
+  }
+
+  p {
+    color: $bq-quote-color;
+    font-style: $bq-quote-style;
+    font-weight: $bq-quote-weight;
+  }
+
+  cite {
+    @include minion;
+    color: $bq-cite-color;
+    font-style: $bq-cite-style;
+  }
+}
+

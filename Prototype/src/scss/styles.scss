@@ -1,0 +1,97 @@
+@charset 'utf-8';
+
+// ****************************************************
+//
+//  ATOMIC by Jaywing
+//
+//                                 \         .  ./
+//                             \      .:";'.:.."   /
+//                                 (M^^.^~~:.'").
+//                           -   (/  .    . . \ \)  -
+//    O                         ((| :. ~ ^  :. .|))
+//   |\\                     -   (\- |  \ /  |  /)  -
+//   |  T                         -\  \     /  /-
+//  / \[_]..........................\  \   /  /
+//
+//  F R O N T   E N D   S T A R T E R   K I T
+//
+// *****************************************************
+
+// ----------------------------------------------------------------------
+
+// Global Stylesheet Index
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @create   08/06/2016
+////
+
+
+// * Import Settings
+@import 'settings/settings';   // global variables
+
+// * Import Tools
+@import 'tools/tools';      // Mixins, functions and placeholders
+
+// * Import Generic
+@import 'generic/generic.normalize';
+@import 'generic/generic.fonts';
+@import 'generic/generic.base';
+
+@import 'vendor/vendor.photoswipe';
+
+// * Import Elements
+@import 'elements/elements'; // Un-classed base elements
+
+// * Import Objects
+@import 'objects/media/object.media';
+@import 'objects/blocks/object.blocks';
+@import 'objects/menu/object.menu';
+
+// * Import Components  // Custom UI building blocks
+@import 'components/base/button/component.button';
+@import 'components/base/logo/component.logo';
+@import 'components/base/logo/component.logo-ani';
+@import 'components/base/component.table';
+@import 'components/base/component.main';
+@import 'components/nav/component.global-header';
+@import 'components/nav/component.nav';
+@import 'components/nav/component.nav-sub';
+@import 'components/nav/component.header-bar';
+@import 'components/nav/component.primary-nav';
+@import 'components/nav/component.utility-nav';
+@import 'components/nav/component.nav-toggle';
+@import 'components/nav/component.location';
+@import 'components/nav/component.nav.md';
+@import 'components/gallery/component.gallery';
+@import 'components/map/component.map';
+@import 'components/staffList/component.staff-list';
+@import 'components/calendar/component.calendar';
+
+
+@import 'components/text/component.intro-txt';
+@import 'components/text/component.text';
+
+@import 'components/section/component.section';
+
+@import 'components/hero/component.hero';
+
+@import 'components/promo/component.promo';
+
+@import 'components/footer/component.footer';
+
+
+// * import Trumps      // Helper classes, hacks and browser fixes
+@import 'trumps/trump.border';
+@import 'trumps/trump.color';
+@import 'trumps/trump.typography';
+@import 'trumps/trump.visibility';
+@import 'trumps/trump.font-size';
+@import 'trumps/trump.grid';
+@import 'trumps/trump.misc';
+@import 'trumps/trump.print';
+@import 'trumps/trump.shame'; // Oooh! You are naughty!!
+@import 'trumps/trump.debug'; // turn on in global settings (enables coloured borders round elements)

@@ -1,0 +1,56 @@
+$nav-toggle-color: $header-bar-link-color;
+$nav-toggle-hover-color: $c-highlight;
+$nav-toggle-padding: $g-spacer-xxs $g-spacer-sm $g-spacer-sm;
+$nav-toggle-radius: $g-border-radius;
+$nav-toggle-border: 0;
+$nav-toggle-text-size: 1rem;
+$nav-toggle-icon-size: 1.35rem;
+
+.NavToggle {
+  position: absolute;
+  z-index: $g-z-menu-mob-plus2;
+  top: $g-spacer-sm;
+  right: $g-spacer-sm;
+  margin: 0;
+  color: $nav-toggle-color;
+  padding: $nav-toggle-padding;
+  border: $nav-toggle-border;
+  border-radius: $nav-toggle-radius;
+  background: rgba($c-light, .7);
+  font-size: $nav-toggle-text-size;
+  text-transform: uppercase;
+  outline: none;
+  line-height: 1.25;
+
+  &:hover, &:focus {
+    color: $nav-toggle-hover-color;
+    border-color: $nav-toggle-hover-color;
+  }
+
+  span {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    font-weight: $g-weight-bold;
+    font-family: $g-font-sans2;
+  }
+
+  .fa {
+    font-size: $nav-toggle-icon-size;
+    margin-left: 6px;
+    float: right;
+    color: $c-highlight;
+  }
+  .fa-times {
+    display: none;
+  }
+
+  .menu-is-open & {
+    .fa-times {
+      display: inline-block;
+    }
+    .fa-bars {
+      display: none;
+    }
+  }
+}

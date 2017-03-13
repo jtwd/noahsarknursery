@@ -1,0 +1,30 @@
+.noahs-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -($g-spacer-xs);
+  margin-right: -($g-spacer-xs);
+
+  .gallery-item {
+    width: 33.3%;
+    padding: $g-spacer-xs;
+    margin: 0;
+  }
+
+  figcaption {
+    display: none;
+  }
+
+  @include sm {
+    margin-left: -($g-spacer-sm);
+    margin-right: -($g-spacer-sm);
+    .gallery-item {
+      padding: $g-spacer-sm;
+    }
+  }
+
+  @include lg {
+    .gallery-item {
+      width:25%;
+    }
+  }
+}

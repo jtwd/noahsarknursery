@@ -1,0 +1,142 @@
+{
+  "title": "Noah's Ark Nursery Website 1.0",
+  "pages": [
+    {
+      "name": "Homepage",
+      "url": "home.html"
+    },
+    {
+      "name": "Button",
+      "url": "button.html"
+    },
+    {
+      "name": "Grid",
+      "url": "grid.html"
+    },
+    {
+      "name": "Media",
+      "url": "media.html"
+    },
+    {
+      "name": "Typography",
+      "url": "typography.html"
+    },
+    {
+      "name": "Blocks",
+      "url": "blocks.html"
+    },
+    {
+      "name": "Menu",
+      "url": "menu.html"
+    },
+    {
+      "name": "Colours",
+      "url": "colours.html"
+    },
+    {
+      "name": "Logo",
+      "url": "logo.html"
+    },
+    {
+      "name": "Footer",
+      "url": "footer.html"
+    },
+    {
+      "name": "Hero",
+      "url": "hero.html"
+    },
+    {
+      "name": "Intro text",
+      "url": "Intro-text.html"
+    },
+    {
+      "name": "Promos",
+      "url": "Promos.html"
+    }
+  ],
+  "palette": [
+    {
+      "color": "Blue",
+      "hex": "#2c4c95"
+    },
+    {
+      "color": "Purple",
+      "hex": "#351151"
+    },
+    {
+      "color": "Red",
+      "hex": "#d52821"
+    },
+    {
+      "color": "Yellow",
+      "hex": "#ecac31"
+    }
+  ],
+  "shades": [
+    {
+      "color": "Dark 0",
+      "hex": "#000000"
+    },
+    {
+      "color": "Dark 10",
+      "hex": "#1b1b1b"
+    },
+    {
+      "color": "Dark 20",
+      "hex": "#303030"
+    },
+    {
+      "color": "Dark 30",
+      "hex": "#474747"
+    },
+    {
+      "color": "Dark 40",
+      "hex": "#5e5e5e"
+    },
+    {
+      "color": "Grey",
+      "hex": "#777777"
+    },
+    {
+      "color": "Light 40",
+      "hex": "#919191"
+    },
+    {
+      "color": "Light 30",
+      "hex": "#ababab"
+    },
+    {
+      "color": "Light 20",
+      "hex": "#c6c6c6"
+    },
+    {
+      "color": "Light 10",
+      "hex": "#e2e2e2"
+    },
+    {
+      "color": "Light",
+      "hex": "#ffffff"
+    }
+  ],
+  "index": {
+    "title": "This is a sub title",
+    "ext": " - James",
+    "team": [
+      {
+        "name": "James Taylor"
+      },
+      {
+        "name": "Dan Peters"
+      },
+      {
+        "name": "Anthony Fisher"
+      },
+      {
+        "name": "Stuart Kent"
+      },
+      {
+        "name": "Will Broook"
+      }
+    ]
+  }
+}

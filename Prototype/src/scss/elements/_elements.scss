@@ -1,0 +1,24 @@
+// ----------------------------------------------------------------------
+
+// Elements: index
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jt
+/// @create   15/06/2016
+////
+
+/// Import all the unclasses element styles
+
+@import 'typography/element.headings';
+@import 'typography/element.paragraph';
+@import 'typography/element.blockquote';
+@import 'typography/element.links';
+@import 'typography/element.lists';
+@import 'typography/element.inline';
+@import 'typography/element.details';
+
+@import 'element.details';
+@import 'element.figure';

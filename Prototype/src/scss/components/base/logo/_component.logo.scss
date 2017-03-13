@@ -1,0 +1,118 @@
+// ----------------------------------------------------------------------
+
+// Components: Logo
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @created  20/07/2016
+////
+
+
+$logo-sm-width:     75px;
+$logo-font-family:  $g-font-sans2;
+$logo-font-size:    20px;
+$logo-line-height:  1.35;
+$logo-sm-margin:    0 auto;
+$logo-grad-color:   $c-light;
+
+
+.Logo {
+  position: relative;
+  z-index: $g-z-menu-mob-plus1;
+  text-decoration: none;
+  display: block;
+  margin: 0 auto;
+  height: auto;
+  text-align: center;
+  background: url(../img/bg-menu-grad.png) repeat-x center bottom;
+  border-radius: 0 0 25% 25%;
+}
+
+.Logo--lg {
+  display: none;
+}
+
+.Logo--sm {
+  display: inline-block;
+  position: relative;
+  min-width: 280px;
+  margin: .5rem auto;
+  text-align: center;
+  img {
+    width: 95px;
+    height: auto;
+    margin: $logo-sm-margin;
+  }
+}
+
+.Logo-texts {
+  padding-top: 0.5rem;
+  line-height: $logo-line-height;
+}
+
+.Logo-text {
+  display: block;
+  position: absolute;
+  font-family: $logo-font-family;
+  font-size: $logo-font-size;
+  max-width: 120px;
+  overflow: hidden;
+  opacity: 1;
+
+  u {
+    text-decoration: none;
+  }
+
+  &.colorPrimary,
+  &.colorTertiary {
+    top: 2rem;
+  }
+
+  &.colorPrimary,
+  &.colorSecondary {
+    right: 69%;
+    text-align: right;
+  }
+  &.colorTertiary,
+  &.colorHighlight {
+    text-align: left;
+    left: 67%;
+  }
+
+  &.colorSecondary,
+  &.colorHighlight {
+    top: 3.5rem;
+  }
+
+  .loaded & {
+    opacity: 1;
+    max-width: 120px;
+  }
+}
+
+.Logo-frame {
+  display: none;
+}
+
+@include md {
+  .Logo {
+    margin: 0 auto;
+    max-width: 155px;
+    max-height: 144px;
+    overflow: hidden;
+    background: none;
+    z-index: 199;
+    -webkit-backface-visibility: hidden;
+  }
+  .Logo--sm {
+    display: none;
+  }
+  .Logo--lg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}

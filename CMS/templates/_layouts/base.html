@@ -1,0 +1,18 @@
+{% set baseUrl = craft.config.environmentVariables.assetsBaseUrl %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB">
+<head>
+  {% block head %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://jtwerx4u.com/noahsark/assets/css/styles.css">
+  {% endblock %}
+</head>
+<body class="Page{% if bodyClass is defined %} {{ bodyClass }}{% endif %}">
+  {% block body %}{% endblock %}
+  {% block foot %}{% endblock %}
+</body>
+</html>

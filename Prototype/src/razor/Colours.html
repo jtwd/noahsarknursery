@@ -1,0 +1,33 @@
+@layout("layouts/_layout.generic.html");
+
+@{
+  var x = data.palette.length;
+  var y = data.shades.length;
+}
+
+  <h2>Colours</h2>
+  <hr>
+
+  <h3>Palette</h3>
+
+  <ul style="margin:0;list-style:none;">
+    @for(var i=0; i < x; i++) {
+    <li style="clear:both;margin:0;padding:0;">
+      <div style="background: @data.palette[i].hex; width: 50px; height: 30px; border: 1px solid grey; margin: 0 5px 5px 0; float: left">&nbsp;</div>
+      <strong>@data.palette[i].color</strong> - @data.palette[i].hex
+    </li>
+    }
+  </ul>
+
+  <h3>Shades</h3>
+
+  <ul style="margin:0;list-style:none;">
+    @for(var i=0; i < y; i++) {
+    <li style="clear:both;margin:0;padding:0;">
+      <div style="background: @data.shades[i].hex; width: 50px; height: 30px; border: 1px solid grey; margin: 0 5px 5px 0; float: left">&nbsp;</div>
+      <strong>@data.shades[i].color</strong> - @data.shades[i].hex
+    </li>
+    }
+  </ul>
+
+

@@ -1,0 +1,26 @@
+.Section {
+  margin-bottom: $g-spacer;
+  background: $c-very-strong-trans-light;
+  padding: $g-spacer;
+  border-radius: 4px;
+
+  @include md {
+    background: $c-very-strong-trans-light;
+    padding: $g-spacer-lg;
+    border-radius: 8px;
+  }
+}
+
+.Section--content {
+  background: rgba(255,255,255,0.6);
+  padding-top: $g-spacer;
+  padding-bottom: $g-spacer;
+  position: relative;
+}
+
+@include xl {
+  .Section {
+    padding-top: $g-spacer-xl;
+    padding-bottom: $g-spacer-xl;
+  }
+}

@@ -1,0 +1,65 @@
+.Footer {
+  position: relative;
+  z-index: 10;
+  background: #dde9f7;
+  background: linear-gradient(
+    to bottom,
+    rgba(#dde9f7, 0%) 0%,
+    #dde9f7 20%
+  );
+
+  &:before {
+    content: '';
+    display: block;
+    padding-top: 43.2%;
+    background: url(../img/ark-footer.png) no-repeat center bottom;
+    background-size: 100%;
+    z-index: 199;
+  }
+
+}
+
+.Footer-inner {
+  padding: 0 $g-spacer $g-spacer;
+}
+
+.Footer-credit, .Footer-copyright, .Footer-contacts {
+  margin: 0;
+}
+
+.Footer-copyright {
+  padding-top: 0;
+  padding-bottom: $g-spacer-xxs;
+  line-height: 1.2;
+  position: relative;
+
+  b {
+    font-weight: $g-weight-bold;
+  }
+  a {
+    text-decoration: none;
+    @include lg {
+      color: $c-dark-15;
+    }
+  }
+
+  i {
+    width: 14px;
+    text-align: center;
+    margin-left: -2px;
+    color: $c-dark-30;
+  }
+
+}
+
+.Footer-credit {
+  text-align: right;
+  padding: $g-spacer;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  a {
+    text-decoration: none;
+  }
+}

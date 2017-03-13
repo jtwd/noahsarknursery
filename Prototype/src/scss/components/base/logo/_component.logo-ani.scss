@@ -1,0 +1,124 @@
+
+.Logo--ani {
+
+  .Logo--sm > img,
+  .Logo--lg {
+    display: none;
+  }
+
+  .Logo-frame {
+    width: 95px;
+    display: inline-block;
+    margin: 0 auto;
+    height: 119px;
+    overflow: visible;
+    position: relative;
+  }
+
+  .Logo-scene, .Logo-ark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .Logo-scene {
+    z-index: 20;
+  }
+
+  .Logo-ark {
+    z-index: 10;
+    transform-origin: 50% 100%;
+    -webkit-backface-visibility: hidden;
+    img {
+      -webkit-backface-visibility: hidden;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    .Logo-ark {
+      animation: rocking 1.9s infinite;
+    }
+  }
+
+}
+
+@include md {
+
+  .Logo.Logo--ani {
+    width: 155px;
+    border-radius: 0;
+    height: auto;
+    max-height: none;
+
+    .Logo--lg {
+      display: none;
+    }
+    .Logo--sm {
+      position: relative;
+      display: block;
+      width: auto;
+      height: 145px;
+      min-width: 0;
+      margin: 0;
+      background: url(../img/logo-text-8bit.png) no-repeat top center;
+      background-size: 100%;
+      img {
+        width: auto;
+      }
+    }
+
+    .Logo-frame {
+      position: absolute;
+      bottom: 0px;
+      left: 50%;
+      transform: translateX(-54%);
+      -webkit-transform: translateX(-54%);
+      width: 98px;
+      height: 123px;
+    }
+
+  }
+
+  .Logo-text {
+    display: none;
+  }
+
+}
+
+
+@keyframes rocking {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) translateX(0);
+  }
+
+  12.5% {
+    transform: translateY(0px) rotate(-1deg) translateX(-1px);
+  }
+
+  25% {
+    transform: translateY(1px) rotate(-2deg) translateX(-2px);
+  }
+
+  37.5% {
+    transform: translateY(1px) rotate(-1deg) translateX(-1px);
+  }
+
+  50% {
+    transform: translateY(2px) rotate(0deg) translateX(0px);
+  }
+
+  62.5% {
+    transform: translateY(2px) rotate(1deg) translateX(1px);
+  }
+
+  75% {
+    transform: translateY(1px) rotate(2deg) translateX(2px);
+  }
+
+  87.5% {
+    transform: translateY(1px) rotate(1deg) translateX(1px);
+  }
+
+}

@@ -1,0 +1,31 @@
+// ----------------------------------------------------------------------
+
+// Elements: Details
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @create   21/07/2016
+////
+
+
+$details-margin: $g-spacer 0;
+$summary-cursor: pointer;
+
+
+details {
+  margin: $details-margin;
+
+  @include trim-child-margins;
+
+  summary {
+    cursor: $summary-cursor;
+    margin: 0;
+  }
+
+  summary + p {
+    margin-top: 0;
+  }
+}

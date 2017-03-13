@@ -1,0 +1,15 @@
+{% set gallery = entry.gallery.galleryItems %}
+{% if gallery | length %}
+  <div class="noahs-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+    {% for item in gallery %}
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="gallery-item">
+      <a href="{{ item.galleryImage.first().url }}" itemprop="contentUrl" data-size="1288x859">
+        <img src="{{ item.galleryThumb.first().url }}" itemprop="thumbnail" alt="" />
+      </a>
+      {% if item.galleryCaption %}<figcaption itemprop="caption description">{{ item.galleryCaption }}</figcaption>{% endif %}
+    </figure>
+    {% endfor %}
+
+  </div>
+{% endif %}

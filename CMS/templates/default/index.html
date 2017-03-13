@@ -1,0 +1,83 @@
+{% extends "_layouts/site" %}
+
+
+{% macro menu_item(item = '', title = 'Home', activeItem = '') %}
+{% set itemUrl = item == '' ? siteUrl : url(item) %}
+<li{% if item == activeItem %} class="is-active"{% endif %}><a href="{{itemUrl}}">{{ title }}</a></li>
+{% endmacro %}
+
+{% block main %}
+
+<div class="row">
+
+  {% if menuActive %}
+    <div class="col col--12 col-md--6 col-lg--3">
+      <div class="col col--12 col-md--6 col-lg--3">
+        <div class="Section Section--content">
+          <nav class="Nav Nav--sub">
+            <a href="#" id="sub-nav-toggle" class="Nav-toggle" title="Open/close sub menu">Who we are: <strong>{{ menuActive }}</strong> <i class="fa fa-chevron-down"></i></a>
+            <ul class="Nav-menu">
+              {% for item in subMenu %}
+                {{ _self.menu_item(item.slug, item.menuItemTitle, activeSection) }}
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  {% else %}
+    <div class="col col--12 col-md--6 col-lg--3 is-sticky" hidden></div>
+  {% endif %}
+
+  <div class="col col--12 col-lg--9">
+
+    <article class="Section Section--content">
+
+
+      <h1>{{ entry.pageHeading }}</h1>
+      {% if entry.subHeading %}<h2 class="textSubHeading">{{ entry.subHeading }}</h2>{% endif %}
+
+      {% if entry.featuredImage | length %}
+        <div class="Hero">
+          <div class="Hero-img">
+            <img src="{{ entry.featuredImage.first().url }}" class="showing" alt="" />
+          </div>
+        </div>
+      {% endif %}
+
+      {% if entry.leadParagraph %}<p class="textLead">{{ entry.leadParagraph }}</p>{% endif %}
+
+      {{ entry.body }}
+
+      {% switch activeSection %}
+        {% case 'gallery' %}
+          {% include '_partials/gallery-body.html' %}
+        {% case 'contact' %}
+          {% include '_partials/contact-body.html' %}
+        {% case 'staffing' %}
+          {% include '_partials/staffing.html' %}
+        {% case 'calendar' %}
+          {% include '_partials/calendar.html' %}
+        {% case 'newsletter' %}
+          {% include '_partials/newsletter.html' %}
+      {% endswitch %}
+
+    </article>
+
+  </div>
+
+</div>
+
+{% endblock %}
+
+{% block foot %}
+
+  {% switch activeSection %}
+    {% case 'gallery' %}
+      {% include '_partials/gallery-footer.html' %}
+    {% case 'contact' %}
+      {% include '_partials/contact-footer.html' %}
+  {% endswitch %}
+
+  <script src="{{ baseUrl }}assets/js/app1.js"></script>
+{% endblock %}

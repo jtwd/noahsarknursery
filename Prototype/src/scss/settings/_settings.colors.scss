@@ -1,0 +1,91 @@
+// -----------------------------------
+
+// Settings: Colours
+
+// -----------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @created  08/06/2016
+////
+
+/// Colour palette is set up using actual colour names at the top, then
+/// each of these is assigned to a global variable (which is not named
+/// according to its colour but by its function.
+///
+/// When referencing colour anywhere else in the project, the global
+/// variable names must be used.
+///
+/// With this setup the whole of the sites colour palette can be amended
+/// from within this file.
+
+$c-palette: (
+  black:  #222,
+  white:  #fff,
+  blue:   #2c4c95,
+  purple: #351151,
+  teal:   #2fcde0,
+  red:    #d52821,
+  green:  #49ca86,
+  yellow: #ecac31
+);
+
+// Shade color variables
+$c-dark:      map-get($c-palette, black);
+$c-dark-1:     lighten($c-dark, 10%);
+$c-dark-2:     lighten($c-dark, 20%);
+$c-dark-3:     lighten($c-dark, 30%);
+$c-dark-4:     lighten($c-dark, 40%);
+$c-light:     map-get($c-palette, white);
+$c-light-1:    darken($c-light, 10%);
+$c-light-2:    darken($c-light, 20%);
+$c-light-3:    darken($c-light, 30%);
+$c-light-4:    darken($c-light, 40%);
+$c-grey:      lighten($c-dark, 50%);
+
+$c-dark-15:   lighten($c-dark, 15%);
+$c-dark-30:   lighten($c-dark, 30%);
+$c-light-15:  darken($c-light, 15%);
+$c-light-30:  darken($c-light, 30%);
+
+$c-primary:       map-get($c-palette, blue);
+$c-primary-light: lighten($c-primary, 15%);
+$c-primary-pale:  lighten($c-primary, 85%);
+$c-primary-dark:  darken($c-primary, 15%);
+
+$c-secondary:       map-get($c-palette, purple);
+$c-secondary-light: lighten($c-secondary, 15%);
+$c-secondary-dark:  darken($c-secondary, 15%);
+
+$c-tertiary:       map-get($c-palette, red);
+$c-tertiary-light: lighten($c-tertiary, 15%);
+$c-tertiary-dark:  darken($c-tertiary, 15%);
+
+$c-highlight:       map-get($c-palette, yellow);
+$c-highlight-light: lighten($c-highlight, 15%);
+$c-highlight-dark:  darken($c-highlight, 15%);
+
+$c-error:   map-get($c-palette, red);
+$c-success: map-get($c-palette, green);
+
+// Brand colors for social channels
+$g-social-colors: (
+  facebook:   #3B5998,
+  twitter:    #0084B4,
+  googlePlus: #DC4A38,
+  linkedIn:   #1F88BE,
+  youtube:    #CC181E,
+  instagram:  #49769C,
+  pinterest:  #00ACED
+);
+
+$c-subtle-trans-dark      : rgba(0, 0, 0, 0.03);
+$c-trans-dark             : rgba(0, 0, 0, 0.05);
+$c-strong-trans-dark      : rgba(0, 0, 0, 0.10);
+$c-very-strong-trans-dark : rgba(0, 0, 0, 0.15);
+
+$c-subtle-trans-light     : rgba(255, 255, 255, 0.02);
+$c-trans-light            : rgba(255, 255, 255, 0.08);
+$c-strong-trans-light     : rgba(255, 255, 255, 0.12);
+$c-very-strong-trans-light: rgba(255, 255, 255, 0.20);
