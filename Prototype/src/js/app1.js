@@ -118,4 +118,17 @@ if (Math.max(document.documentElement.clientWidth, window.innerWidth || 0) > 959
   var sticky = new Sticky('.sticky');
 }
 
+// disable right click on images
+document.oncontextmenu = context_menu;
+
+function context_menu(e) {
+  if (!e) var e = window.event;
+  var eTarget = (window.event) ? e.srcElement : e.target;
+
+  if (eTarget.nodeName == "IMG") {
+    //context menu attempt on top of an image element
+    return false;
+  }
+}
+
 console.log('app1.js has loaded!');
