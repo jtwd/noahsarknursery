@@ -32,10 +32,12 @@
   }
 
   @include lg {
-    @include clearfix;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+
     li {
-      width: 50%;
-      float: left;
+      flex: 0 0 50%;
       padding-right: 0.5rem;
     }
   }
